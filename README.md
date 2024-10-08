@@ -1,6 +1,6 @@
 
 
-# PWanclouds assessment tasks
+# Wanclouds assessment tasks
 
 In this repository there are two tasks, that were given after the interview. 
 
@@ -22,7 +22,29 @@ eBPF (Extended Berkeley Packet Filter) is a powerful feature in the Linux kernel
 Before diving into the implementation, ensure you have a suitable environment set up:
 
 1. **Environment Setup**: 
-   - It is highly recommended to create a virtual environment for this project.
+   - It is highly recommended to create a virtual environment for this project. To create virtual enviroment, use the following commands:
+     Here are the essential commands to set up and use a virtual environment in Linux:
+
+ *Install `virtualenv` (if not already installed):*
+   ```bash
+   sudo apt install python3-venv
+   ```
+
+ *Create a virtual environment:*
+   Navigate to your project folder and run:
+   ```bash
+   python3 -m venv <env_name>
+   ```
+   Replace `<env_name>` with the name you want for your environment.
+
+  *Activate the virtual environment:*
+   ```bash
+   source <env_name>/bin/activate
+   ```
+   After activation, your shell will show the virtual environment name in the prompt.
+
+ Now simply Install the required packages.
+
 
 2. **Install BCC**:
    - Use the following commands to install BCC for eBPF implementation:
@@ -78,28 +100,7 @@ To overcome these issues, I utilized various resources:
 ### Result
 I successfully implemented the Doubly Linked List, allowing for various operations. Below is a screenshot of the output:
 
----
 
-## Installation and Usage
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/rahimnadan/wanclouds-assesment-tasks.git
-   cd wanclouds-assessment-tasks
-   ```
-
-2. For Task 1, run the eBPF program using:
-   ```bash
-   python3 main.py <process_name>
-   ```
-
-3. For Task 2, compile and run the C program:
-   ```bash
-   gcc -o main main.c
-   ./main
-   ```
-
----
 
 # Task 2 output
 
@@ -115,4 +116,30 @@ I successfully implemented the Doubly Linked List, allowing for various operatio
 
 ## My Findings
 Both tasks provided valuable insights into system programming and data structures. I gained hands-on experience with eBPF and improved my C programming skills, which will significantly contribute to my professional development.
+
+---
+
+## Installation and Usage of repository
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/rahimnadan/wanclouds-assesment-tasks.git
+   cd wanclouds-assessment-tasks
+   ```
+
+2. For Task 1, first run the eBPF program using:
+   ```bash
+   sudo python3 main.py <your name>
+   ```
+   Now run the program that accept your name as argument, which you want to monitor through eBPF
+   ```bash
+   python3 main.py <your name>
+   ```
+3. For Task 2, compile and run the C program:
+   ```bash
+   gcc -o main main.c
+   ./main
+   ```
+
+---
 
